@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: microservice-app
+  namespace: openshift-gitops 
+spec:
+  project: test
+  source:
+    repoURL: https://github.com/NoahInCloud/ArgoCD-Openshift.git
+    targetRevision: main
+    path: microservice/k8s/
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: microservice-test
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true # Automatically correct any configuration drift
+      enabled: true 
+      allowEmpty: false 
+    syncOptions:
+      - CreateNamespace=true # Optional: Create the target namespace if it doesn't exist
