@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: todo
+  labels:
+    app: microservice-app-example
+    service: todos-api
+  name: todos-api
+spec:
+  ports:
+  - port: 8082
+  selector:
+    service: todos-api
