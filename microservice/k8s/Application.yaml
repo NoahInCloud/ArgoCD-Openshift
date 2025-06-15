@@ -16,7 +16,7 @@ spec:
     automated:
       prune: true
       selfHeal: true # Automatically correct any configuration drift
-      enabled: true 
+      #enabled: true 
       allowEmpty: false 
     syncOptions:
       - CreateNamespace=true # Optional: Create the target namespace if it doesn't exist
