@@ -6,7 +6,7 @@ metadata:
 spec:
   project: test
   source:
-    repoURL: https://github.com/NoahInCloud/ArgoCD-Openshift.git
+    repoURL: https://github.com/NoahInCloud/ArgoCD-Openshift
     targetRevision: main
     path: microservice/k8s/
   destination:
