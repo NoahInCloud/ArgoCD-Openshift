@@ -4,7 +4,7 @@ metadata:
   name: microservice-app
   namespace: openshift-gitops 
 spec:
-  project: test
+  project: default
   source:
     repoURL: https://github.com/NoahInCloud/ArgoCD-Openshift
     targetRevision: main
